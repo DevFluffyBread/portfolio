@@ -1,0 +1,40 @@
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.perfil img {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+}
+
+.texto {
+    max-width: 550px;
+}
+
+.texto h1 {
+    color: pink;
+    margin-bottom: 12px;
+}
+
+.texto p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .perfil img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
