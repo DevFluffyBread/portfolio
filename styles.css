@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+html {
+  overflow: hidden;
+}
+
+section {
+transition: filter 0.5s ease, opacity 0.5s ease;
+  height: 100vh;
+  overflow: hidden;
+}
+
+section.fora-de-foco {
+    filter: blur(5px);
+    opacity: 0.4;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     background: #0f0f0f;
@@ -143,8 +158,8 @@ body{
 #sobremim {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-top: 35px;
-    height: auto;
     background-color: #a855f7;
 }
 
@@ -164,7 +179,6 @@ body{
 }
 
 .sobre-mim-imagem {
-    align-self: flex-end;
     margin-left: 200px;
     width: 550px;
     height: auto;
@@ -172,6 +186,7 @@ body{
 }
 
 #projetos {
+    background-color: #0f0f0f;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -200,7 +215,8 @@ body{
 
 
 .projeto1, .projeto2, .projeto3, .projeto4, .projeto5, .projeto6 {
-    display: block;
+    display: flex;
+    flex-direction: column;
     color: #ffffff;
     aspect-ratio: 1/1;
     border-radius: 15px;
@@ -208,7 +224,6 @@ body{
 }
 
 .projeto-imagem {
-    margin-bottom: -10px;
     width: 100%;
     height: 50%;
     object-fit: cover;
