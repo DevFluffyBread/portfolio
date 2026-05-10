@@ -19,7 +19,22 @@ function atualizarFoco() {
     });
 }
 
-atualizarFoco();
+document.querySelectorAll('a[href="#projetos"], a[href="#contato"]').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const alvo = this.getAttribute('href').replace('#', '');
+        const indice = secoes.findIndex(function(s) {
+            return s.id === alvo;
+        });
+        
+        if (indice !== -1) {
+            indiceAtual = indice;
+            secoes[indiceAtual].scrollIntoView({ behavior: 'smooth' });
+            atualizarFoco();
+        }
+    });
+});
 
 window.addEventListener('wheel', function(e){
     if(Bloqueio) return;
