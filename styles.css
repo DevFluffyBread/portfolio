@@ -1,3 +1,9 @@
+:root{
+    --degrade: background: #000000;
+background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%),;
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -31,8 +37,11 @@ body{
     justify-content: space-between;
     padding: 80px;
     padding-bottom: 0;
-    min-height: 75vh;
+    min-height: 50vh;
+    --degrade: background: #000000;
+    background: linear-gradient(180deg, #3b296e70 0%, #000000 20%, #000000 100%);
 }
+
 
 .apresentacao-texto{
     max-width: 600px;
@@ -91,22 +100,23 @@ body{
 
 .Eu {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 0%;
+    right: 0%;
     width: 85%;
     height: auto;
     
 }
 
-.colagem1 {
+.CSS {
     position: absolute;
     bottom: 79%;
     right: 65%;
     width: 12%;
     transform: rotate(10deg);
+    height: auto;
 }
 
-.colagem2 {
+.HTML {
     position: absolute;
     bottom: 55%;
     right: 70%;
@@ -114,7 +124,7 @@ body{
     transform: rotate(-10deg);
 }
 
-.colagem3 {
+.JS {
     position: absolute;
     bottom: 90%;
     left: 58%;
@@ -122,7 +132,7 @@ body{
     transform: rotate(-5deg);
 }
 
-.colagem4 {
+.JAVA {
     position: absolute;
     bottom: 80%;
     left: 85%;
@@ -130,7 +140,7 @@ body{
     transform: rotate(8deg);
 }
 
-.colagem5 {
+.GODOT {
     position: absolute;
     bottom: 58%;
     left: 93%;
@@ -152,15 +162,13 @@ body{
 }
 
 #sobremim {
+    padding: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 35px;
+    justify-content:center;
     background-color: #795DCB;
 }
 
 .sobremim-texto h1{
-    margin-top: 10px;
     color: #ffffff;
     text-align: center;
 }
@@ -171,14 +179,34 @@ body{
     line-height: 1.7;
     color:#ffffff;
     max-width: 750px;
+    margin-top: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
     margin-top: 40px;
 }
 
-.sobre-mim-imagem {
-    margin-left: 200px;
-    width: 550px;
-    height: auto;
-    aspect-ratio: 1/1;
+.caixinha {
+    display: block;
+    background-color: #000000;
+}
+
+.skills-texto {
+    display: flex;
+    flex-direction:row ;
+    gap: 20px;
 }
 
 #projetos {
@@ -190,8 +218,7 @@ body{
 
 .projeto {
     text-align: justify;
-    font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.3;
     color:#ffffff;
     max-width: 750px;
     height: auto;
@@ -232,14 +259,15 @@ body{
 
 
 .projeto-imagem {
+    display: block;
     width: 100%;
-    height: 50%;
+    height: 220px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .projeto-info{
-    margin: 20px;
+    padding: 20px;
     background-color: #333333;
     display: flex;
     flex-direction: column;

@@ -53,3 +53,4 @@ else if(e.deltaY<0 && indiceAtual > 0){
     }, 1000);
     atualizarFoco();
 }   )
+scroll
